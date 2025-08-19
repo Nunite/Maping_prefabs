@@ -57,9 +57,30 @@ https://[你的用户名].github.io/[仓库名称]
 ## 故障排除
 
 ### 常见问题
-1. **部署失败**: 检查 Actions 标签中的错误日志
-2. **404 错误**: 确保 GitHub Pages 已正确启用
-3. **样式丢失**: 确认 `next.config.mjs` 中的配置正确
+
+1. **Jekyll 构建错误（"No such file or directory @ dir_chdir0 - /github/workspace/docs"）**
+   - **原因**: GitHub Pages 尝试使用 Jekyll 而不是 GitHub Actions 构建
+   - **解决方案**: 
+     - 确保仓库中有 `.nojekyll` 文件（已添加到 `public/` 目录）
+     - 在 GitHub 仓库设置中，确保 Pages 源设置为 "GitHub Actions" 而不是 "Deploy from a branch"
+     - 检查工作流文件中的分支名称是否正确
+
+2. **部署失败**
+   - 检查 GitHub Actions 工作流是否正确运行
+   - 确认 `next.config.mjs` 配置正确
+   - 查看 Actions 日志获取详细错误信息
+   - 验证分支名称在工作流配置中是否正确
+
+3. **页面显示空白或路径错误**
+   - 确认 `output: 'export'` 配置已启用
+   - 检查 `basePath` 和 `assetPrefix` 配置是否正确
+   - 检查浏览器控制台是否有错误
+   - 验证静态文件是否正确生成
+
+4. **样式或图片加载失败**
+   - 确认 `images.unoptimized: true` 配置
+   - 检查资源路径是否正确
+   - 验证 `trailingSlash: true` 配置
 
 ### 检查部署状态
 - 在 **Actions** 标签中查看工作流运行状态

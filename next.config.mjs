@@ -4,12 +4,9 @@ import createMDX from '@next/mdx'
 const nextConfig = {
 	pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 	output: 'export',
-	trailingSlash: true,
 	images: {
 		unoptimized: true,
 	},
-	basePath: process.env.NODE_ENV === 'production' ? '/Maping_prefabs' : '',
-	assetPrefix: process.env.NODE_ENV === 'production' ? '/Maping_prefabs/' : '',
 
 	// yaml importing
 	webpack: (config, options) => {

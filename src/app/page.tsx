@@ -1,5 +1,5 @@
 export default function Home() {
-	const links = ['预制件', '文字制作']
+	const links = ['prefabs', 'techdc']
 
 	return (
 		<div className='flex flex-col gap-4 justify-center items-center min-h-screen bg-emerald-950 text-lime-200'>

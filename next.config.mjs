@@ -4,6 +4,8 @@ import createMDX from '@next/mdx'
 const nextConfig = {
 	pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 	output: 'export',
+	basePath: '/Maping_prefabs',
+	assetPrefix: '/Maping_prefabs',
 	images: {
 		unoptimized: true,
 	},

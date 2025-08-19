@@ -27,7 +27,7 @@ const roboto_mono = Roboto_Mono({
 })
 
 export const metadata: Metadata = {
-	title: 'spacehare',
+	title: 'Maping_prefabs',
 	description: '',
 }
 

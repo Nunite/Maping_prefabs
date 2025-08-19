@@ -1,5 +1,5 @@
 export default function Home() {
-	const links = ['prefabs', 'techdc']
+	const links = ['预制件', '文字制作']
 
 	return (
 		<div className='flex flex-col gap-4 justify-center items-center min-h-screen bg-emerald-950 text-lime-200'>
@@ -15,10 +15,10 @@ export default function Home() {
 				)
 			})}
 			<a
-				href='https://github.com/spacehare/spacehare.github.io'
+				href='https://github.com/nunite/Maping_prefabs'
 				className='hover:text-lime-50 text-lime-200 transition-all duration-200 hover:scale-105 text-lg font-thin'
 			>
-				https://github.com/spacehare/spacehare.github.io
+				https://github.com/nunite/Maping_prefabs
 			</a>
 		</div>
 	)

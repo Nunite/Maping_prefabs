@@ -18,7 +18,7 @@ export default function Page() {
 	const [textInput, setTextInput] = useState('')
 	const [copied, setCopied] = useState(false)
 	const [preview, setPreview] = useState(
-		'Hi! After downloading the edited WAD below (in the page footer), type something in the box above, then click the button to generate a brush for TrenchBroom.\n\nThe brush will be automatically copied to your clipboard.'
+		'嗨！在下载下面的WAD（在页面底部）后，在上面的框中输入一些内容，然后点击按钮为TrenchBroom生成一个笔刷。\n\n笔刷将自动复制到您的剪贴板。'
 	)
 	const regex = {
 		offset: {
@@ -148,13 +148,13 @@ export default function Page() {
 							disabled={textInput == ''}
 						>
 							{copied ? (
-								<span>COPIED TO CLIPBOARD!</span>
-							) : (
-								<>
-									<span className='capitalize'>generate & copy</span>
-									<span className='opacity-60 uppercase'>(enter)</span>
-								</>
-							)}
+								<span>已复制到剪贴板！</span>
+						) : (
+							<>
+								<span className='capitalize'>生成并复制</span>
+								<span className='opacity-60 uppercase'>(回车)</span>
+							</>
+						)}
 						</button>
 					</div>
 				</div>
@@ -170,15 +170,15 @@ export default function Page() {
 					<div className='bg-solid-dark p-4 rounded-2xl flex flex-col gap-2 w-full'>
 						<div>
 							<h1 className='font-roboto font-thin text-xl text-center'>
-								valid characters
-							</h1>
+									有效字符
+								</h1>
 							<pre className='text-center font-mono font-light text-md text-lime-200'>
 								<ValidDisplay />
 							</pre>
 						</div>
 						<hr className='border-lime-200/25' />
 						<div className='flex flex-col'>
-							<h2 className='font-thin text-lg text-center'>valid regex</h2>
+							<h2 className='font-thin text-lg text-center'>有效正则表达式</h2>
 							<div className='font-robotoMono font-light text-md text-lime-200 text-center text-nowrap'>
 								{String(validChars)}
 							</div>

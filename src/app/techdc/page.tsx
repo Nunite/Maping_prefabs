@@ -30,7 +30,7 @@ export default function Page() {
 
 	const generateBrush = () => {
 		if (textInput == '') return
-		let output = '{\n"classname" "func_detail_illusionary"\n"_noclipfaces" "1"'
+		let output = '{\n"classname" "func_illusionary"\n"_noclipfaces" "1"\n"skin" "-1"\n"_minlight" "0"\n"rendermode" "3"\n"renderamt" "255"\n"rendercolor" "0 0 0"\n"renderfx" ""\n"zhlt_invisible" ""\n"zhlt_noclip" ""\n"zhlt_lightflags" ""\n"style" ""'
 
 		const currentStyle = Tech.styles.find((a) => a.name === style)!
 		const currentColor = Tech.colors.find((a) => a.tex === color)!
